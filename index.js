@@ -1,4 +1,3 @@
-var contains = require('lodash.contains');
 var filter = require('lodash.filter');
 var forEach = require('lodash.foreach');
 var isBoolean = require('lodash.isboolean');
@@ -30,18 +29,18 @@ function bigOil(element, tubes, psiGreaterThan5783) {
   }
 
   var engines = [
-    {num: 1, can: 1, hyd: 1, comp: [2]},
-    {num: 2, can: 2, hyd: 1, comp: [1]},
-    {num: 3, can: 3, hyd: 2, comp: [1, 2]},
-    {num: 4, can: 1, hyd: 2, comp: [1, 2]},
-    {num: 5, can: 2, hyd: 2, comp: [2]},
-    {num: 6, can: 3, hyd: 2, comp: [1]},
-    {num: 7, can: 3, hyd: 3, comp: [2]},
-    {num: 8, can: 1, hyd: 3, comp: [2]},
-    {num: 9, can: 2, hyd: 3, comp: [2]},
-    {num: 10, can: 3, hyd: 3, comp: [1, 2]},
-    {num: 11, can: 1, hyd: 3, comp: [1]},
-    {num: 12, can: 2, hyd: 3, comp: [1]}
+    {num: 1, can: 1, hyd: 1, bar: 375},
+    {num: 2, can: 2, hyd: 1, bar: 500},
+    {num: 3, can: 3, hyd: 2, bar: 400},
+    {num: 4, can: 1, hyd: 2, bar: 400},
+    {num: 5, can: 2, hyd: 2, bar: 300},
+    {num: 6, can: 3, hyd: 2, bar: 450},
+    {num: 7, can: 3, hyd: 3, bar: 375},
+    {num: 8, can: 1, hyd: 3, bar: 275},
+    {num: 9, can: 2, hyd: 3, bar: 375},
+    {num: 10, can: 3, hyd: 3, bar: 400},
+    {num: 11, can: 1, hyd: 3, bar: 425},
+    {num: 12, can: 2, hyd: 3, bar: 510}
   ];
 
   switch (element) {
@@ -71,12 +70,12 @@ function bigOil(element, tubes, psiGreaterThan5783) {
   switch (psiGreaterThan5783) {
     case true:
       engines = filter(engines, function(engine) {
-        return contains(engine.comp, 1);
+        return engine.bar * 14.5037738 > 5783;
       });
       break;
     case false:
       engines = filter(engines, function(engine) {
-        return contains(engine.comp, 2);
+        return engine.bar * 14.5037738 < 5812;
       });
       break;
   }

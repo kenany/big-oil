@@ -23,7 +23,6 @@
     "test": "tape test/index.js"
   },
   "dependencies": {
-    "lodash.contains": "^2.4.1",
     "lodash.filter": "^2.4.1",
     "lodash.foreach": "^2.4.1",
     "lodash.isboolean": "^2.4.1",
