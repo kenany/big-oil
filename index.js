@@ -8,24 +8,24 @@ var isNumber = require('lodash.isnumber');
  *
  * @param {String} [element] Element written down on the spiral notebook
  * @param {Number} [tubes] Number of tubes written down on the clipboard
- * @param {Boolean} [psiGreaterThan5783] Pressure on computer is higher than 5783
+ * @param {Boolean} [psiGreaterThan5800] Pressure on computer is higher than ~5800
  * @return {Array} possible engines
  * @api public
  */
-function bigOil(element, tubes, psiGreaterThan5783) {
+function bigOil(element, tubes, psiGreaterThan5800) {
   if (isNumber(element)) {
     if (isBoolean(tubes)) {
-      psiGreaterThan5783 = tubes;
+      psiGreaterThan5800 = tubes;
     }
     tubes = element;
   }
 
   if (isBoolean(element)) {
-    psiGreaterThan5783 = element;
+    psiGreaterThan5800 = element;
   }
 
   if (isBoolean(tubes)) {
-    psiGreaterThan5783 = tubes;
+    psiGreaterThan5800 = tubes;
   }
 
   var engines = [
@@ -67,7 +67,7 @@ function bigOil(element, tubes, psiGreaterThan5783) {
       break;
   }
 
-  switch (psiGreaterThan5783) {
+  switch (psiGreaterThan5800) {
     case true:
       engines = filter(engines, function(engine) {
         return engine.bar * 14.5037738 > 5783;
