@@ -1,5 +1,7 @@
 # big-oil
 
+[![Build Status](https://travis-ci.org/KenanY/big-oil.svg)](https://travis-ci.org/KenanY/big-oil)
+
 Fusion engine picker for PAYDAY 2's Big Oil heist.
 
 ## Example
