@@ -1,0 +1,36 @@
+{
+  "name": "big-oil",
+  "version": "0.0.0",
+  "description": "Fusion engine picker for PAYDAY 2's Big Oil heist",
+  "keywords": [
+    "big oil",
+    "heist",
+    "payday",
+    "payday 2"
+  ],
+  "repository": "KenanY/big-oil",
+  "license": "MIT",
+  "author": "Kenan Yildirim <kenan@kenany.me> (http://kenany.me/)",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE.txt"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "dependencies": {
+    "lodash.contains": "^2.4.1",
+    "lodash.filter": "^2.4.1",
+    "lodash.foreach": "^2.4.1",
+    "lodash.isboolean": "^2.4.1",
+    "lodash.isnumber": "^2.4.1"
+  },
+  "devDependencies": {
+    "lodash.isfunction": "^2.4.1",
+    "tape": "^2.13.2"
+  }
+}
