@@ -55,16 +55,8 @@ function bigOil(element, tubes, psiGreaterThan5800) {
       break;
   }
 
-  switch (tubes) {
-    case 1:
-      engines = filter(engines, {hyd: 1});
-      break;
-    case 2:
-      engines = filter(engines, {hyd: 2});
-      break;
-    case 3:
-      engines = filter(engines, {hyd: 3});
-      break;
+  if (isNumber(tubes)) {
+    engines = filter(engines, {hyd: tubes});
   }
 
   switch (psiGreaterThan5800) {
