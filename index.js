@@ -1,7 +1,7 @@
 var filter = require('lodash.filter');
-var forEach = require('lodash.foreach');
 var isBoolean = require('lodash.isboolean');
 var isNumber = require('lodash.isnumber');
+var pluck = require('lodash.pluck');
 
 /**
  * Narrows down fusion engines based on information lying around the lab.
@@ -72,11 +72,7 @@ function bigOil(element, tubes, psiGreaterThan5800) {
       break;
   }
 
-  var possibilities = [];
-  forEach(engines, function(value) {
-    possibilities.push(value.num);
-  });
-  return possibilities;
+  return pluck(engines, 'num');
 }
 
 module.exports = bigOil;
