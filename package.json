@@ -23,7 +23,7 @@
     "test": "tape test/index.js"
   },
   "dependencies": {
-    "lodash.filter": "^2.4.1",
+    "lodash.filter": "^4.2.1",
     "lodash.isboolean": "^2.4.1",
     "lodash.isnumber": "^2.4.1",
     "lodash.pluck": "^2.4.1"
