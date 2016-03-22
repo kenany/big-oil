@@ -26,7 +26,7 @@
     "lodash.filter": "^4.2.1",
     "lodash.isboolean": "^3.0.3",
     "lodash.isnumber": "^3.0.3",
-    "lodash.pluck": "^2.4.1"
+    "lodash.pluck": "^3.1.2"
   },
   "devDependencies": {
     "lodash.isfunction": "^3.0.8",
