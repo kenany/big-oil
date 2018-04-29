@@ -20,6 +20,8 @@
     "test": "test"
   },
   "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run -s lint",
     "test": "tape test/index.js"
   },
   "dependencies": {
@@ -29,6 +31,8 @@
     "lodash.pluck": "^3.1.2"
   },
   "devDependencies": {
+    "@kenan/eslint-config": "^5.0.0",
+    "eslint": "^4.19.1",
     "lodash.isfunction": "^3.0.8",
     "tape": "^4.5.1"
   }
