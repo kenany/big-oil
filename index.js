@@ -29,34 +29,34 @@ function bigOil(element, tubes, psiGreaterThan5800) {
   }
 
   var engines = [
-    {num: 1, can: 1, hyd: 1, bar: 375},
-    {num: 2, can: 2, hyd: 1, bar: 500},
-    {num: 3, can: 3, hyd: 2, bar: 400},
-    {num: 4, can: 1, hyd: 2, bar: 400},
-    {num: 5, can: 2, hyd: 2, bar: 300},
-    {num: 6, can: 3, hyd: 2, bar: 450},
-    {num: 7, can: 3, hyd: 3, bar: 375},
-    {num: 8, can: 1, hyd: 3, bar: 275},
-    {num: 9, can: 2, hyd: 3, bar: 375},
-    {num: 10, can: 3, hyd: 3, bar: 400},
-    {num: 11, can: 1, hyd: 3, bar: 425},
-    {num: 12, can: 2, hyd: 3, bar: 510}
+    { num: 1, can: 1, hyd: 1, bar: 375 },
+    { num: 2, can: 2, hyd: 1, bar: 500 },
+    { num: 3, can: 3, hyd: 2, bar: 400 },
+    { num: 4, can: 1, hyd: 2, bar: 400 },
+    { num: 5, can: 2, hyd: 2, bar: 300 },
+    { num: 6, can: 3, hyd: 2, bar: 450 },
+    { num: 7, can: 3, hyd: 3, bar: 375 },
+    { num: 8, can: 1, hyd: 3, bar: 275 },
+    { num: 9, can: 2, hyd: 3, bar: 375 },
+    { num: 10, can: 3, hyd: 3, bar: 400 },
+    { num: 11, can: 1, hyd: 3, bar: 425 },
+    { num: 12, can: 2, hyd: 3, bar: 510 }
   ];
 
   switch (element) {
     case 'nitrogen':
-      engines = filter(engines, {can: 1});
+      engines = filter(engines, { can: 1 });
       break;
     case 'deterium':
-      engines = filter(engines, {can: 2});
+      engines = filter(engines, { can: 2 });
       break;
     case 'helium':
-      engines = filter(engines, {can: 3});
+      engines = filter(engines, { can: 3 });
       break;
   }
 
   if (isNumber(tubes)) {
-    engines = filter(engines, {hyd: tubes});
+    engines = filter(engines, { hyd: tubes });
   }
 
   switch (psiGreaterThan5800) {
