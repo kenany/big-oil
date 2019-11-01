@@ -8,7 +8,8 @@ var pluck = require('lodash.pluck');
  *
  * @param {String} [element] Element written down on the spiral notebook
  * @param {Number} [tubes] Number of tubes written down on the clipboard
- * @param {Boolean} [psiGreaterThan5800] Pressure on computer is higher than ~5800
+ * @param {Boolean} [psiGreaterThan5800] Pressure on computer is higher than
+ *  ~5800
  * @return {Array} possible engines
  * @api public
  */
@@ -53,23 +54,22 @@ function bigOil(element, tubes, psiGreaterThan5800) {
     case 'helium':
       engines = filter(engines, { can: 3 });
       break;
+    default:
+      break;
   }
 
   if (isNumber(tubes)) {
     engines = filter(engines, { hyd: tubes });
   }
 
-  switch (psiGreaterThan5800) {
-    case true:
-      engines = filter(engines, function(engine) {
+  if (isBoolean(psiGreaterThan5800)) {
+    engines = psiGreaterThan5800
+      ? filter(engines, function(engine) {
         return engine.bar * 14.5037738 > 5783;
-      });
-      break;
-    case false:
-      engines = filter(engines, function(engine) {
+      })
+      : filter(engines, function(engine) {
         return engine.bar * 14.5037738 < 5812;
       });
-      break;
   }
 
   return pluck(engines, 'num');
