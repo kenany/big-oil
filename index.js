@@ -1,7 +1,7 @@
-var filter = require('lodash.filter');
-var isBoolean = require('lodash.isboolean');
-var isNumber = require('lodash.isnumber');
-var pluck = require('lodash.pluck');
+const filter = require('lodash.filter');
+const isBoolean = require('lodash.isboolean');
+const isNumber = require('lodash.isnumber');
+const pluck = require('lodash.pluck');
 
 /**
  * Narrows down fusion engines based on information lying around the lab.
@@ -29,7 +29,7 @@ function bigOil(element, tubes, psiGreaterThan5800) {
     psiGreaterThan5800 = tubes;
   }
 
-  var engines = [
+  let engines = [
     { num: 1, can: 1, hyd: 1, bar: 375 },
     { num: 2, can: 2, hyd: 1, bar: 500 },
     { num: 3, can: 3, hyd: 2, bar: 400 },
