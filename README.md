@@ -5,7 +5,7 @@ Fusion engine picker for PAYDAY 2's Big Oil heist.
 ## Example
 
 ``` javascript
-var bigOil = require('big-oil');
+const bigOil = require('big-oil');
 
 bigOil('nitrogen', 1, false);
 // => [1]
@@ -20,7 +20,7 @@ $ npm install big-oil
 ## API
 
 ``` javascript
-var bigOil = require('big-oil');
+const bigOil = require('big-oil');
 ```
 
 ### `bigOil([element, ][tubes, ][psiGreaterThan5800])`

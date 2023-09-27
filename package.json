@@ -8,11 +8,11 @@
     "payday",
     "payday 2"
   ],
-  "repository": "KenanY/big-oil",
+  "repository": "github:kenany/big-oil",
   "license": "MIT",
   "author": "Kenan Yildirim <kenan@kenany.me> (https://kenany.me/)",
   "engines": {
-    "node": "14 || 16 || >=18"
+    "node": "18 || >=20"
   },
   "main": "index.js",
   "files": [
@@ -25,7 +25,8 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run -s lint",
-    "test": "tape test/index.js"
+    "test": "tape test/index.js",
+    "release": "semantic-release"
   },
   "dependencies": {
     "lodash.filter": "^4.6.0",
@@ -34,9 +35,13 @@
     "lodash.pluck": "^3.1.2"
   },
   "devDependencies": {
-    "@kenan/eslint-config": "^10.0.2",
-    "eslint": "^8.48.0",
+    "@kenan/eslint-config": "^11.0.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "eslint": "^8.50.0",
     "lodash.isfunction": "3.0.9",
-    "tape": "^5.6.6"
+    "semantic-release": "^22.0.5",
+    "tape": "^5.7.0"
   }
 }
